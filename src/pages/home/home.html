@@ -1,14 +1,15 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar  color="primary">
     <ion-title>
-      Ionic Blank
+      Camera Image Recognize
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-row>
+    <ion-col style="text-align:center">    
+      <button ion-button color="secondary" (click)="gotoCamera()">Recognize</button>
+    </ion-col>
+  </ion-row>
 </ion-content>

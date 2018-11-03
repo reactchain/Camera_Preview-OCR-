@@ -10,5 +10,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  gotoCamera() {
+    this.navCtrl.push("CameraviewPage");
+  }
 }
