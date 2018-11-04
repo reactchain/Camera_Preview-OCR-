@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CameraPreview,CameraPreviewOptions, CameraPreviewPictureOptions} from '@ionic-native/camera-preview';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 /**
  * Generated class for the CameraviewPage page.
@@ -28,7 +29,8 @@ export class CameraviewPage {
     height: window.innerHeight,
     quality: 100
   };
-  constructor(public navCtrl: NavController, public navParams: NavParams, private cameraPreview: CameraPreview) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private cameraPreview: CameraPreview,private screenOrientation: ScreenOrientation) {
+    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
   }
 
   
